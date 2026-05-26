@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+            <div class="member top">
+                <img src="images/member1.jpg" alt="Member 1">
+                <h3>Team Member</h3>
+                <span>IT Executive</span>
+            </div>
+
+            <!-- Upper Left -->
+            <div class="member upper-left">
+                <img src="images/member2.jpg" alt="Member 2">
+                <h3>Team Member</h3>
+                <span>System Support</span>
+            </div>
+
+            <!-- Upper Right -->
+            <div class="member upper-right">
+                <img src="images/member3.jpg" alt="Member 3">
+                <h3>Team Member</h3>
+                <span>Network Support</span>
+            </div>
+
+            <!-- Left -->
+            <div class="member left">
+                <img src="images/member4.jpg" alt="Member 4">
+                <h3>Team Member</h3>
+                <span>IT Operations</span>
+            </div>
+
+            <!-- Manager Core -->
+            <div class="manager-core">
+                <div class="core-ring"></div>
+                <img src="images/manager.jpg" alt="Manager">
+                <h2>Manager</h2>
+                <span>IT Team Lead</span>
+            </div>
+
+            <!-- Right -->
+            <div class="member right">
+                <img src="images/member5.jpg" alt="Member 5">
+                <h3>Team Member</h3>
+                <span>Infrastructure Support</span>
+            </div>
+
+            <!-- Bottom Left -->
+            <div class="member bottom-left">
+                <img src="images/member6.jpg" alt="Member 6">
+                <h3>Team Member</h3>
+                <span>Helpdesk Support</span>
+            </div>
+
+            <!-- Bottom Right -->
+            <div class="member bottom-right">
+                <img src="images/member7.jpg" alt="Member 7">
+                <h3>Team Member</h3>
+                <span>Field Support</span>
+            </div>
+
+            <!-- Bottom -->
+            <div class="member bottom">
+                <img src="images/member8.jpg" alt="Member 8">
+                <h3>Team Member</h3>
+                <span>Application Support</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

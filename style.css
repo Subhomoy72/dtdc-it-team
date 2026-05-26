@@ -1,0 +1,734 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    overflow-x: hidden;
+
+    background: #020817;
+
+    color: white;
+}
+/* Floating Particles */
+
+.particles::before,
+.particles::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        radial-gradient(#00bfff 1px, transparent 1px);
+
+    background-size: 80px 80px;
+
+    opacity: 0.08;
+
+    animation:
+        moveParticles 20s linear infinite;
+
+    z-index: -1;
+}
+
+.particles::after {
+
+    animation-direction: reverse;
+
+    opacity: 0.05;
+}
+/* Scanner */
+
+.scanner {
+
+    position: fixed;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            #00bfff,
+            transparent);
+
+    top: 0;
+
+    box-shadow:
+        0 0 20px #00bfff;
+
+    animation:
+        scan 6s linear infinite;
+
+    z-index: 2;
+
+    opacity: 0.7;
+}
+/* Background */
+
+.background {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at left,
+            rgba(0, 140, 255, 0.15),
+            transparent 40%),
+
+        radial-gradient(circle at right,
+            rgba(255, 0, 90, 0.12),
+            transparent 40%),
+
+        #020817;
+
+    z-index: -3;
+}
+
+/* Grid */
+
+.grid {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px);
+
+    background-size: 40px 40px;
+
+    z-index: -2;
+    animation:
+    gridMove 20s linear infinite;
+}
+/* AI Glow Orbs */
+
+.glow {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.25;
+
+    z-index: -1;
+
+    animation:
+        floatGlow 10s ease-in-out infinite;
+}
+
+/* Blue */
+
+.glow1 {
+
+    width: 300px;
+    height: 300px;
+
+    background: #00bfff;
+
+    left: -100px;
+    top: 200px;
+}
+
+/* Red */
+
+.glow2 {
+
+    width: 250px;
+    height: 250px;
+
+    background: #ff295c;
+
+    right: -100px;
+    top: 300px;
+
+    animation-delay: 2s;
+}
+
+/* Cyan */
+
+.glow3 {
+
+    width: 220px;
+    height: 220px;
+
+    background: cyan;
+
+    bottom: -50px;
+    left: 40%;
+
+    animation-delay: 4s;
+}
+/* Hero */
+
+.hero {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+/* Heading */
+
+.heading {
+
+   
+
+    margin-top: 40px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+.heading h1 {
+
+    font-size: 72px;
+
+    font-weight: 800;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,0.7),
+        0 0 40px rgba(0,191,255,0.4);
+}
+
+.heading span {
+
+    color: #00bfff;
+}
+
+.heading p {
+
+    margin-top: 15px;
+
+    color: #d1d5db;
+
+    font-size: 22px;
+}
+
+/* Team Wrapper */
+
+.team-wrapper {
+
+    position: relative;
+
+    width: 1400px;
+    height: 980px;
+
+    margin-top: 20px;
+}
+.ring {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0,191,255,0.2);
+
+    animation:
+        rotateCircle 20s linear infinite;
+}
+
+/* Ring 1 */
+
+.ring1 {
+
+    width: 850px;
+    height: 850px;
+
+    top: 10px;
+    left: 275px;
+}
+
+/* Ring 2 */
+
+.ring2 {
+
+    width: 950px;
+    height: 950px;
+
+    top: -40px;
+    left: 225px;
+
+    animation-direction: reverse;
+}
+/* Main Circle */
+
+.main-circle {
+
+    position: absolute;
+
+    width: 780px;
+    height: 780px;
+
+    border-radius: 50%;
+
+    border:
+        3px dashed rgba(0,191,255,0.5);
+
+    top: 40px;
+    left: 310px;
+
+    box-shadow:
+        0 0 40px rgba(0,191,255,0.1);
+
+    animation:
+        rotateCircle 40s linear infinite;
+}
+
+/* Connections */
+
+.connections {
+
+    .connections {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+}
+
+.connections line {
+
+    stroke: #00bfff;
+
+    stroke-width: 3;
+
+    filter:
+        drop-shadow(0 0 8px rgba(0,191,255,0.8));
+}
+
+/* Cards */
+
+.card,
+.manager {
+
+    position: absolute;
+
+    width: 190px;
+
+    padding: 20px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid rgba(0,191,255,0.25);
+
+    backdrop-filter: blur(12px);
+
+    text-align: center;
+
+    transition: 0.4s ease;
+
+    box-shadow:
+        0 0 30px rgba(0,191,255,0.12);
+}
+
+/* Hover */
+
+.card:hover,
+.manager:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.05);
+}
+
+/* Images */
+
+.card img,
+.manager img {
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        4px solid #00bfff;
+
+    box-shadow:
+        0 0 20px rgba(0,191,255,0.7);
+}
+
+/* Text */
+
+.card h3,
+.manager h2 {
+
+    margin-top: 15px;
+
+    font-size: 28px;
+}
+
+.card p,
+.manager span {
+
+    margin-top: 10px;
+
+    color: #00bfff;
+
+    font-size: 18px;
+}
+
+/* Manager */
+
+.manager {
+
+    width: 240px;
+
+    top: 290px;
+    left: 580px;
+
+    border:
+        1px solid rgba(255,0,90,0.5);
+
+    box-shadow:
+        0 0 40px rgba(255,0,90,0.2);
+}
+
+.manager img {
+
+    width: 170px;
+    height: 170px;
+
+    border:
+        5px solid #ff295c;
+
+    box-shadow:
+        0 0 30px rgba(255,0,90,0.8);
+}
+
+/* Ring */
+
+.manager-ring {
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(255,0,90,0.4);
+
+    top: -10px;
+    left: -10px;
+
+    animation:
+        pulseRing 3s infinite;
+}
+
+/* Positions */
+
+.top {
+
+    top: -60px;
+    left: 605px;
+}
+
+.upper-left {
+
+    top: 150px;
+    left: 340px;
+}
+
+.upper-right {
+
+    top: 150px;
+    right: 340px;
+}
+
+.left {
+
+    top: 360px;
+    left: 120px;
+}
+
+.right {
+
+    top: 360px;
+    right: 120px;
+}
+
+.bottom-left {
+
+    bottom: 90px;
+    left: 340px;
+}
+
+.bottom-right {
+
+    bottom: 90px;
+    right: 340px;
+}
+
+.bottom {
+
+    bottom: -60px;
+    left: 605px;
+}
+
+/* Side Text */
+
+.side-text {
+
+    position: fixed;
+
+    z-index: 10;
+}
+
+.left-side {
+
+    left: 40px;
+    top: 450px;
+}
+
+.right-side {
+
+    right: 40px;
+    top: 250px;
+}
+
+.side-text h2 {
+
+    color: #00bfff;
+
+    font-size: 32px;
+}
+
+.side-text span {
+
+    color: white;
+
+    font-size: 24px;
+}
+
+/* HUD Corners */
+
+.corner {
+
+    position: fixed;
+
+    width: 120px;
+    height: 120px;
+
+    border: 4px solid #00bfff;
+
+    z-index: 10;
+}
+
+.top-left {
+
+    top: 15px;
+    left: 15px;
+
+    border-right: none;
+    border-bottom: none;
+}
+
+.top-right {
+
+    top: 15px;
+    right: 15px;
+
+    border-left: none;
+    border-bottom: none;
+}
+
+.bottom-left-corner {
+
+    bottom: 15px;
+    left: 15px;
+
+    border-right: none;
+    border-top: none;
+}
+
+.bottom-right-corner {
+
+    bottom: 15px;
+    right: 15px;
+
+    border-left: none;
+    border-top: none;
+}
+
+/* Animations */
+
+@keyframes rotateCircle {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseRing {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+
+    50% {
+
+        transform: scale(1.05);
+
+        opacity: 0.7;
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+
+@media(max-width: 1500px) {
+
+    body {
+
+        zoom: 80%;
+    }
+}
+/* Stars */
+
+.star {
+
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    opacity: 0.8;
+
+    animation:
+        blink infinite alternate;
+}
+
+@keyframes blink {
+
+    from {
+
+        opacity: 0.2;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+@keyframes floatGlow {
+
+    0% {
+
+        transform:
+            translateY(0px)
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            translateY(-40px)
+            scale(1.1);
+    }
+
+    100% {
+
+        transform:
+            translateY(0px)
+            scale(1);
+    }
+}
+
+@keyframes moveParticles {
+
+    from {
+
+        transform:
+            translateY(0);
+    }
+
+    to {
+
+        transform:
+            translateY(-100px);
+    }
+}
+
+@keyframes scan {
+
+    from {
+
+        top: -10%;
+    }
+
+    to {
+
+        top: 110%;
+    }
+}
+
+@keyframes gridMove {
+
+    from {
+
+        background-position: 0 0;
+    }
+
+    to {
+
+        background-position: 80px 80px;
+    }
+}
