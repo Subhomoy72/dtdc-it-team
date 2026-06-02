@@ -59,3 +59,32 @@ if(banner){
 
     },4000);
 }
+/* AI Drone Follow Effect */
+
+const drone = document.querySelector(".ai-drone");
+
+document.addEventListener("mousemove", (e) => {
+
+    drone.style.transform =
+        `translate(${e.clientX * 0.01}px,
+                   ${e.clientY * 0.01}px)`;
+
+});
+/* Hologram Pulse */
+
+setInterval(() => {
+
+    const core = document.querySelector(".dtdc-core");
+
+    if(core){
+
+        core.style.opacity = "0.30";
+
+        setTimeout(() => {
+
+            core.style.opacity = "0.18";
+
+        }, 700);
+    }
+
+}, 4000);
