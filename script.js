@@ -39,3 +39,23 @@ document.addEventListener("mousemove", (e) => {
         `translate(${x}px, ${y}px)`;
 
 });
+/* DTDC Banner Pulse */
+
+const banner = document.querySelector(".dtdc-banner");
+
+if(banner){
+
+    setInterval(()=>{
+
+        banner.style.filter =
+        "drop-shadow(0 0 35px rgba(0,191,255,.8))";
+
+        setTimeout(()=>{
+
+            banner.style.filter =
+            "drop-shadow(0 0 15px rgba(0,191,255,.4))";
+
+        },500);
+
+    },4000);
+}
